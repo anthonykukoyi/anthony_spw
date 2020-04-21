@@ -16,12 +16,13 @@
                         </div>
                     @endif
                     <h3>Your Blog Posts</h3>
+                    <br>
                     @if(count($posts) > 0)
-                        <table class="table table-striped">
+                        <table class="table table-dark table-striped">
                             <tr>
                                 <th>Title</th>
-                                <th>Action 1</th>
-                                <th>Action 2</th>
+                                <th>Action</th>
+                                <th>Action</th>
                             </tr>
                             @foreach($posts as $post)
                             <tr>

@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <a style="margin-top: 10px" href="/admin/users" class="btn btn-primary">Go Back</a>    
             <div class="card-header">Edit {{ $user->name }}</div>
 
                 <div class="card-body">

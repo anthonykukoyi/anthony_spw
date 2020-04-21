@@ -23,6 +23,40 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <style>
+        html, body {
+                background-color: #2b3035;
+                font-family: 'Consolas', sans-serif;
+                color: #e0e0e0;
+            }
+
+        .jumbotron {
+                padding: 2rem 1rem;
+                margin-bottom: 2rem;
+                background-color: #343A40;
+                color: #e0e0e0;
+                border-radius: 0.3rem;
+            }
+
+        .card {
+                position: relative;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                color: #ffffff;
+                background-color: #343A40;
+                background-clip: border-box;
+                border: 0px solid rgba(0, 0, 0, 0.125);
+                border-radius: 0.25rem;
+            }
+        
+    </style>    
+
+
 </head>
 <body>
         @include('inc.navbar')

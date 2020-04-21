@@ -8,7 +8,7 @@
                 <div class="card-header">Users</div>
 
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-dark table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -16,7 +16,8 @@
                                 <th scope="col">Username</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Roles</th>
-                                <th scope="col">Actions</th>
+                                <th scope="col">Action</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,13 +30,15 @@
                                     <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td>
                                     <td>
                                         @can('edit-users')
-                                            <a href="{{ route('admin.users.edit', $user->id) }}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
+                                            <a href="{{ route('admin.users.edit', $user->id) }}"><button type="button" class="btn btn-primary">Edit</button></a>
                                         @endcan
+                                    </td>
+                                    <td>
                                         @can('delete-users')
-                                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST" class="float-left">
+                                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST">
                                                 @csrf
                                                 {{ method_field('DELETE') }}
-                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                                <button type="submit" class="btn btn-danger btn-danger">Delete</button>
                                             </form>
                                         @endcan
                                     </td>

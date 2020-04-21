@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Edit Post</h1>
+    <a style="margin-top: 10px" href="/home" class="btn btn-primary">Go Back</a>
+    <h2 style="margin-top: 10px">Edit Post</h2>
     {!! Form::open(['action' => ['PostsController@update', $post->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="form-group">
             {{Form::label('title', 'Title')}}

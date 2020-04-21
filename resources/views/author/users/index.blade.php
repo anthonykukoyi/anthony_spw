@@ -8,7 +8,7 @@
                 <div class="card-header">Users</div>
 
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-dark table-striped">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -26,10 +26,10 @@
                                     <td>{{ $user->email }}</td>
                                     <td>
                                         @can('edit-users')
-                                            <a href="{{ route('admin.users.edit', $user->id) }}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
+                                            <a href="{{ route('admin.users.edit', $user->id) }}"><button type="button" class="btn btn-primary">Edit</button></a>
                                         @endcan
                                         @can('delete-users')
-                                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST" class="float-left">
+                                            <form action="{{ route('admin.users.destroy', $user) }}" method="POST">
                                                 @csrf
                                                 {{ method_field('DELETE') }}
                                                 <button type="submit" class="btn btn-danger">Delete</button>

@@ -7,7 +7,7 @@
         @if(count($posts) > 0)
                 @foreach($posts as $post)
                     <a href="/posts/{{$post->id}}">
-                        <div class="card" style="margin-bottom:15px">
+                        <div class="card" style="margin-bottom:18px">
                             <div class="row">
                                 <div class="col-md-4 col-sm-4" style="margin-right:auto margin-left:auto">
                                     <img class="card-img-top" src="/storage/cover_images/{{$post->cover_image}}">
